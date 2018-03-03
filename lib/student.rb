@@ -55,7 +55,7 @@ class Student
       FROM students
       WHERE name = ?
     SQL
-   self.create(DB[:conn].execute(sql,name).flatten)
+   self.new_from_db(DB[:conn].execute(sql,name).flatten)
  end
 
  def update
