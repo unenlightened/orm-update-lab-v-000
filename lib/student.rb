@@ -19,7 +19,7 @@ class Student
       )
     SQL
 
-    DOC[:conn]
+    DB[:conn].execute(sql)
   end
 
  def self.drop_table
