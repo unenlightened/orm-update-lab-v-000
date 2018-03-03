@@ -55,7 +55,7 @@ class Student
       FROM students
       WHERE name = ?
     SQL
-    DB[:conn].execute(sql,name)
+  result =  DB[:conn].execute(sql,name)
  end
 
  def update
