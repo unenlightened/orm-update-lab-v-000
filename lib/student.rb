@@ -44,8 +44,8 @@ class Student
    self.new(name, grade).tap {|song| song.save}
  end
 
- def self.new_from_db
-
+ def self.new_from_db(row)
+   id, name, grade = row
  end
 
  def self.find_by_name
