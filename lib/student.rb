@@ -49,8 +49,13 @@ class Student
    self.new(name, grade, id)
  end
 
- def self.find_by_name
-
+ def self.find_by_name(name)
+   sql = <<-SQL
+      SELECT *
+      FROM students
+      WHERE name = ?
+    SQL
+    DB[:conn].execute(sql)
  end
 
  def update
