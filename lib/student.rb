@@ -18,6 +18,8 @@ class Student
         grade INTEGER
       )
     SQL
+
+    DOC[:conn]
   end
 
  def self.drop_table
